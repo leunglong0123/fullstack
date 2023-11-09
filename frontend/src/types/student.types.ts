@@ -1,8 +1,9 @@
 export type StudentType = {
-    studentNumber: string
+    studentNumber: number
     name: string
     age: number
     course: string
     semester: number
 }
+
 

@@ -1,11 +1,7 @@
-import {useState} from 'react'
-import AddStudent from "./pages/AddStudent"
+import AddStudent from "./pages/AddStudent";
 
 const App = () => {
-  const [student, setStudent] = useState()
-  return (
-   <AddStudent/>
-  )
-}
+  return <AddStudent />;
+};
 
-export default App
+export default App;
