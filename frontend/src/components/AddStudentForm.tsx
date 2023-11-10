@@ -9,6 +9,7 @@ const AddStudentForm = () => {
     course: "Data",
     semester: 2,
   });
+  // const [error, setError] = useState<boolean>(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
