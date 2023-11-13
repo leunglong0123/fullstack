@@ -4,9 +4,9 @@ import studentsRoutes from './student.routes.js'
 
 const router = express.Router()
 
-// router.use('/', function(req,res) {
-//     res.send("Hello")
-// })
+router.use('/cats', function(req,res) {
+    res.send("Meow!")
+})
 
 router.use('/students', studentsRoutes)
 
