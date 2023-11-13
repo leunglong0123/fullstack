@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StudentType } from "../types/student.types";
+import { addStudent } from "../api/studentApi";
 
 const AddStudentForm = () => {
   const [student, setStudent] = useState<StudentType>({
@@ -26,9 +27,15 @@ const AddStudentForm = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(student);
+
+    try {
+      const response = await addStudent(student);
+      console.log("Student added:", response);
+    } catch {
+      console.log("error adding student");
+    }
   };
 
   return (
